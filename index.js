@@ -50,8 +50,8 @@ function displayQuestion() {
   // Display HTML of question section.
   $(".questions-section").html(
     
-    `<img src="${STORE[questionNumber - 1].icon}" alt="${STORE[questionNumber - 1].alt}" class="icon icon-quiz-left">
-    <img src="${STORE[questionNumber - 1].icon}" alt="${STORE[questionNumber - 1].alt}" class="icon icon-quiz-right">
+    `<img src="${STORE[questionNumber - 1].icon}" class="icon icon-quiz-left">
+    <img src="${STORE[questionNumber - 1].icon}" class="icon icon-quiz-right">
     
     <h2 class="question question${questionNumber}">
       Question : ${STORE[questionNumber - 1].question}
@@ -60,6 +60,7 @@ function displayQuestion() {
     <form class="submit-choice-form" role="form">
     
       <fieldset role="radiogroup">
+        <legend name="choices"></legend>
         <label for="choice1" class="choice">
         <input type="radio" name="choice" id="choice1" value="choice1" role="radio" required> <span>${STORE[questionNumber - 1].choice1}</span>
         </label>
@@ -125,8 +126,8 @@ function isChoiceCorrect() {
 function displayFeedback(isUserCorrect) {
   // Display HTML of feedback section., using boolean isUserCorrect to alter text accordingly.
   $(".feedback-section").html(`
-    <img src="${STORE[questionNumber - 1].icon}" alt="${STORE[questionNumber - 1].alt}" class="icon icon-quiz-left">
-    <img src="${STORE[questionNumber - 1].icon}" alt="${STORE[questionNumber - 1].alt}" class="icon icon-quiz-right">
+    <img src="${STORE[questionNumber - 1].icon}" class="icon icon-quiz-left">
+    <img src="${STORE[questionNumber - 1].icon}" class="icon icon-quiz-right">
     
     <h2 class="choice-dependent-text">
     ${isUserCorrect ? `Correct :D` : `Wrong Answer :(`}
