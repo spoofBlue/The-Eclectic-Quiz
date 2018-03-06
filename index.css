@@ -208,6 +208,10 @@ footer {
   body {
     font-size: 10px;
   }
+
+  main {
+    height : 400px;
+  }
   
   img {
     width : 2em;
@@ -215,8 +219,8 @@ footer {
   }
   
   section {
-  width : 80%;
-  padding : 0px 10px 10px 10px;
+  width : 90%;
+  padding : 0px 5px 5px 5px;
   }
   
   .icon-quiz-left {
